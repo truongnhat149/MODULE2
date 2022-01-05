@@ -1,8 +1,23 @@
 package vn.lpnt;
 
-public class Main {
+public class MyClass {
 
-    public static void main(String[] args) {
-	// write your code here
+    public static void main(String[] args){
+
+        System.out.print("a");
+
     }
+
+    public static void main(){
+
+        System.out.print("b");
+
+    }
+
+    public static void start(String[] args){
+
+        System.out.print("c");
+
+    }
+
 }
