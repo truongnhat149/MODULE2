@@ -7,13 +7,12 @@ public class LoanInterestApp {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Please enter loan amount: ");
-        int tien_vay = scanner.nextInt();
+        int tien_vay = Integer.parseInt(scanner.nextLine());
 
         System.out.print("Please enter interest rate: ");
-        int lai_suat = scanner.nextInt();
+        int lai_suat =  Integer.parseInt(scanner.nextLine());
 
-        System.out.print("Please enter ");
-        int so_ngay = scanner.nextInt();
+
 
 //        int tien_lai = tien_vay * lai_suat/100 / 12 * so_ngay;
 //        for (int i = 1; i <= so_ngay; i++) {
@@ -24,15 +23,18 @@ public class LoanInterestApp {
         System.out.print("Please enter loan week/month/tangerine/year: ");
         String date = scanner.nextLine();
         int sum = 0;
-
+        System.out.print("Please time loan enter ");
+        int so_ngay = Integer.parseInt(scanner.nextLine());
         switch (date) {
             case "week" :
+
                 for (int i = 1; i <= so_ngay; i++) {
                     sum += tien_vay * (lai_suat/100 / 12)/4 * so_ngay;
                 }
                 System.out.println("interest in"+ so_ngay + "week : " + sum);
                 break;
             case "month" :
+
                 for (int i = 1; i <= so_ngay; i++) {
                     sum += tien_vay * (lai_suat/100 / 12) * so_ngay;
                 }
