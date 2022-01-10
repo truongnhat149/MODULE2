@@ -1,54 +1,55 @@
 package vn.lpnt.OOPJava;
 
-import java.util.*;
-
-
-
-    public class FanClass {
+public class FanClass {
+        public static void main(String[] args) {
+            FanClass fan1 = new FanClass(FAST, true, 10, "yellow");
+            System.out.println(fan1);
+            FanClass fan2 = new FanClass(MEDIUM, false, 5, "blue");
+            System.out.println(fan2);
+        }
         final static int SLOW = 1;
         final static int MEDIUM = 2;
         final static int FAST = 3;
+
         private int speed;
         private boolean on;
         private double radius;
-        String color;
+        private String color;
 
-        /** Constructor that creates a default fan */
-        FanClass() {
-            speed = SLOW;
-            on = false;
-            radius = 5;
+       public FanClass(int fast, boolean b, int i, String yellow) {
+            speed = fast;
+            on = b;
+            radius = i;
             color = "blue";
         }
-
-        /** Mutator methods */
-        /** Sets speed */
+        public static int getSlow() {
+            return SLOW;
+        }
+        public static int getMedium() {
+           return MEDIUM;
+        }
+        public static int getFast() {
+           return FAST;
+        }
         public void setSpeed(int newSpeed) {
             speed = newSpeed;
         }
 
-        /** Sets fan on */
         public void turnOn() {
             on = true;
         }
 
-        /** Sets fan off */
         public void turnOff() {
             on = false;
         }
 
-        /** Sets color */
         public void setColor(String newColor) {
             color = newColor;
         }
-
-        /** Sets radius */
         public void setRadius(double newRadius) {
             radius = newRadius;
         }
 
-        /** Accessor methods */
-        /** Return speed */
         public String getSpeed() {
             String s = "";
             switch (speed) {
@@ -58,23 +59,18 @@ import java.util.*;
             }
             return s;
         }
-
-        /** Return on */
         public boolean isOn() {
             return on;
         }
 
-        /** Return radius */
         public double getRadius() {
             return radius;
         }
 
-        /** Return color */
         public String getColor() {
             return color;
         }
 
-        /** Returns a string description for the fan */
         public String toString() {
             if (on == true) {
                 return "\nFan speed: " + getSpeed() + ", color: " + color +

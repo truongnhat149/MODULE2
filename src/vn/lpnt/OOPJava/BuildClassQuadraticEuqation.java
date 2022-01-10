@@ -3,41 +3,52 @@ import java.util.*;
 
 public class BuildClassQuadraticEuqation {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter a,b,c");
-        double a = scanner.nextDouble();
-        double b = scanner.nextDouble();
-        double c = scanner.nextDouble();
-        QuadraticEquation quadraticEquation = new QuadraticEquation(a, b, c);
-        double delta = quadraticEquation.getDiscriminart();
-        double getRoot1 = quadraticEquation.getRoot1();
-        double getRoot2 = quadraticEquation.getRoot2();
-        if (delta > 0) {
-            System.out.println("The equation has two solutions : " + getRoot1 + " and " +getRoot2);
-        } else if ( delta == 0) {
-            System.out.println("Equation with double solution " + (-b / (2*a)));
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a,b,c ");
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+        QuadracticEquation quadratic = new QuadracticEquation(a, b, c);
+        // delta = b^2 - 4ac;
+        // delta > 0 có 2 nghiệm -b +- Math.sqrt(b*b - 4*a*c)/2a;
+        // delta < 0 vô nghiệm
+        // delta = 0 có 1 nghiệm -b/2a
+        if (quadratic.getDelta() > 0) {
+            System.out.println("The equation has two solution " +
+                    (-b + (Math.sqrt(b*b - 4*a*c))/ 2* a)
+                    + " and "
+                    + (-b - (Math.sqrt(b*b - 4*a*c))/ 2* a));
+        } else if (quadratic.getDelta() == 0) {
+            System.out.println("The Equation has a solution "
+                    + (-b / 2*a ));
         } else {
-            System.out.println("The equation has no solution ");
+            System.out.println("The equation has no solution");
         }
-    }
-    public static class QuadraticEquation {
-        double a, b, c, delta;
 
-        public QuadraticEquation(double a, double b, double c) {
+    }
+    public static class QuadracticEquation {
+        private double a;
+        private double b;
+        private double c;
+
+        public QuadracticEquation(double a, double b, double c) {
             this.a = a;
             this.b = b;
             this.c = c;
         }
+        public double getA() {
+            return a;
+        }
 
-        public double getDiscriminart() {
-            return delta = Math.pow(b, 2) - 4*a*c;
+        public double getB() {
+            return b;
         }
-        public double getRoot1() {
-            return (-b + Math.sqrt(b*b - 4*a*c)) / 2*a;
+
+        public double getC() {
+            return c;
         }
-        public double getRoot2() {
-            return (-b - Math.sqrt(b*b - 4*a*c)) / 2*a;
+        public double getDelta() {
+            return Math.pow(b, 2) - 4 * a * c;
         }
     }
 }

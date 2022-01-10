@@ -10,26 +10,43 @@ public class Rectangle {
         System.out.println("Enter heigth");
         double height = scanner.nextDouble();
         DrawRectangle rectangle1 = new DrawRectangle(width, height);
-        System.out.println("Show rectengle " + rectangle1.display());
-        System.out.println("Area rectangle " + rectangle1.getArea());
-        System.out.println("Perimeter " + rectangle1.getPerimeter());
+        System.out.println(rectangle1.display());
+//        System.out.println("Show rectengle " + rectangle1.display());
+//        System.out.println("Area rectangle " + rectangle1.getArea());
+//        System.out.println("Perimeter " + rectangle1.getPerimeter());
     }
 
     public static class DrawRectangle {
-        double width, heigth;
-
-        public DrawRectangle(double width, double heigth) {
+        private double width;
+        private double height;
+        public DrawRectangle() {}
+        public DrawRectangle(double width, double height) {
             this.width = width;
-            this.heigth = heigth;
+            this.height = height;
+        }
+        public double getWidth() {
+            return width;
+        }
+        public void setWidth(double width) {
+            this.width = width;
+        }
+        public void setHeight(double height) {
+            this.height = height;
+        }
+        public double getHeight() {
+            return height;
         }
         public double getArea() {
-            return this.width * this.heigth;
+            return width * height;
         }
         public double getPerimeter() {
-            return (this.width + this.heigth) * 2;
+            return (width + height) * 2;
         }
         public String display() {
-            return "Width =" + width + "Height =" + heigth;
+            return "Area Rectangle = "
+                    + getArea()
+                    + " Perimeter Rectangle "
+                    + getPerimeter();
         }
     }
 }
