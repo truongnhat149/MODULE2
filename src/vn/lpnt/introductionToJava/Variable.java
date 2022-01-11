@@ -1,4 +1,4 @@
-package vn.lpnt;
+package vn.lpnt.introductionToJava;
 
 public class Variable {
     public static void main(String[] args) {

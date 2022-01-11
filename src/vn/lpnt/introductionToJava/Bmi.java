@@ -1,4 +1,4 @@
-package vn.lpnt;
+package vn.lpnt.introductionToJava;
 
 import java.util.Scanner;
 
