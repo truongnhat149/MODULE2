@@ -4,10 +4,11 @@ public class NextDayCalculator {
     public NextDayCalculator(int day, int month, int year) {
     }
 
-    public static String NextDayCalculator(int day, int month, int year) {
+    public static String nextDayCalculator(int day, int month, int year) {
         String nextDay = "";
         boolean isYear = year > 0;
         boolean isMonth = month <= 12 && month >= 1;
+
 
         if (isYear) {
             if (isMonth) {
@@ -15,6 +16,7 @@ public class NextDayCalculator {
                 boolean isDayOfMonth = day <= numDay && day >= 1;
                 boolean isLastDayOfMonth = day == numDay;
                 boolean isLastMonthOfYear = month == 12;
+
                 if (isDayOfMonth) {
                     if (isLastDayOfMonth) {
                         nextDay += 1 + "-";
