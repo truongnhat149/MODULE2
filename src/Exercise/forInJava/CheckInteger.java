@@ -1,9 +1,6 @@
 package Exercise.forInJava;
 
 import java.util.Scanner;
-import  java.math.*;
-
-import static java.lang.Math.sqrt;
 
 public class CheckInteger {
     public static void main(String[] args) {

@@ -1,7 +1,6 @@
 package Exercise.Array;
 import java.util.*;
-import java.util.ArrayList;
-import java.util.List;
+
 public class MinInArray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

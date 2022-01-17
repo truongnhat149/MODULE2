@@ -7,7 +7,7 @@ public class Test {
         Hinh h1 = new Tron();
 //        Hinh h2 = new DaGiac();
         Hinh h5 = h1;
-        DaGiac h4 = h2;
+//        DaGiac h4 = h2;
         Tron h6 = (Tron) h1;
         h2 = h3;
     }

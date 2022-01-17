@@ -2,7 +2,6 @@ package Exercise.Array;
 
 import static java.lang.Math.max;
 
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class SortArray {

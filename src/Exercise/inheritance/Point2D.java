@@ -1,9 +1,5 @@
 package Exercise.inheritance;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Point2D {
     private float x = 0.0f;
     private float y = 0.0f;
