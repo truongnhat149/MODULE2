@@ -1,0 +1,5 @@
+Xin chào!
+A3.14
+Nhật Trường
+
+Student{name='Trường', age=24}

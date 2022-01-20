@@ -3,16 +3,15 @@ package Exercise.dsa_list.method_of_arraylist;
 public class MyListTest {
     public static void main(String[] args) {
         MyList<String> listNames = new MyList<>(10);
-        listNames.add("Na");
-        listNames.add("Nam");
-        listNames.add("Thanh");
-        listNames.add("Tram");
-        listNames.add(3, "THAO");
+        listNames.add("Truong");
+        listNames.add("Tung");
+        listNames.add("Dung");
+        listNames.add("Phuog");
+        listNames.add(3, "ANh Khoa");
         //  listNames.clear();
         listNames.printMyList();
         listNames.remove(3);
         listNames.printMyList();
-
 
 
         MyList<Number> listNumber = new MyList<>(10);

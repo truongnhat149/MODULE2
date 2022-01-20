@@ -1,7 +1,5 @@
 package Exercise.dsa_list.method_of_arraylist;
 
-import java.util.Arrays;
-
 
 public class MyList<E> {
     private int size = 0;
@@ -9,19 +7,14 @@ public class MyList<E> {
     private Object [] elements;
 
     public MyList() {
-        elements =   new Object[DEFAULT_CAPACITY];
+        elements = new Object[DEFAULT_CAPACITY];
     }
+
 
     public MyList(int capacity) {
-        elements =  new Object[capacity];
+        elements = new Object[capacity];
     }
 
-    public void ensureCapacity(int minCapacity) {
-        if (size >= elements.length) {
-            int newSize = minCapacity ;
-            elements = Arrays.copyOf(elements, newSize);
-        }
-    }
 
     public boolean add(E element) {
         if (size == elements.length) {
@@ -31,16 +24,12 @@ public class MyList<E> {
         return true ;
     }
 
-
     public void add(int index, E element) {
-        ensureCapacity(elements.length);
-        for (int i = size; i > index; i--) {
+        for (int i = size; i > index; i--)
             elements[i] = elements[i - 1];
-        }
         elements[index] = element;
         size++;
     }
-
     private void checkIndex(int index) {
         if (index < 0 || index >= size)
             throw new IndexOutOfBoundsException
@@ -57,8 +46,8 @@ public class MyList<E> {
         size--;
         return temp;
     }
-    public int size(){
-        return this.size  ;
+    public int size() {
+        return this.size;
     }
 
     @Override
