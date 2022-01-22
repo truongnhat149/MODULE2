@@ -1,24 +1,21 @@
-package Exercise.java_collection_framework.product_arraylist_linkedlist.product_arraylist;
-
-import java.util.ArrayList;
-import java.util.List;
+package Exercise.java_collection_framework.product_arraylist_linkedlist.product_linkedlist;
 
 public class Product {
-    private int id;
+    private long id;
     private String name;
     private double price;
 
-    public Product(int id, String name, double price) {
+    public Product(long id, String name, double price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -37,10 +34,7 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
-//    public void find() {
-//        List<String> products = new ArrayList<>();
-//        products.contains();
-//    }
+
     @Override
     public String toString() {
         return "Product{" +

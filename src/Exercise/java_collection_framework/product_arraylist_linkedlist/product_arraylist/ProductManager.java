@@ -59,7 +59,7 @@ public class ProductManager {
             System.out.println("Product name: ");
             name = input.nextLine();
             if(isNameAProductList(name))
-                System.out.println("Product hame had in the product list");
+                System.out.println("Product have had in the product list");
         } while (isNameAProductList(name));
 
         // nhập vào id, nếu id nằm trong list thì phải nhập lại
@@ -131,19 +131,19 @@ public class ProductManager {
         }
     }
 
-    private void findProductInProductWithName() {
+    public void findProductInProductWithName() {
         if (productList.isEmpty()) {
             System.out.println("There are no product in the list");
         } else {
             Scanner sc = new Scanner(System.in);
-            System.out.println("Pro duct need find : ");
+            System.out.println("Product need find : ");
             String name = sc.nextLine();
             if (isNameAProductList(name)) {
                 for (Product product : productList) {
                     if (product.getName().equalsIgnoreCase(name)) {
-                     break;
+                        System.out.println(product);
                     } else {
-                        System.out.println("Name have not in the product");
+                        System.out.println("Not  have");
                     }
                 }
             }
@@ -162,7 +162,7 @@ public class ProductManager {
                 for (Product product : productList) {
                     if (product.getId() == id) {
                         System.out.println("Product remove is : " + product.toString());
-                        productList.remove(product);
+                        productList.remove(id);
                     }
                 }
             } else {
