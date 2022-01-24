@@ -1,8 +1,0 @@
-package Exercise.abstract_and_interface.java.animal.Edible;
-
-public class Orange extends Fruit{
-    @Override
-    public String howtoEat() {
-        return "Orange: chuaa";
-    }
-}
