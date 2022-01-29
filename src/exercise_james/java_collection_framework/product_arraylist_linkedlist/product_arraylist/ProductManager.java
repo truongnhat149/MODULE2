@@ -11,7 +11,6 @@ public class ProductManager {
         ArrayList<Product> productList = new ArrayList<>();
         this.productList = productList;
     }
-
     // kiểm tra xem có sản phẩm trong list chưa?
     public boolean isThereAnyProductsOnTheList(Product product) {
         if (!productList.isEmpty()) {

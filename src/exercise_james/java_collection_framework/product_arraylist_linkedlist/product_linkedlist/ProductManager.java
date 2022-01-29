@@ -183,7 +183,7 @@ public class ProductManager {
         if (productList.isEmpty()) {
             System.out.println("There are no product in list!");
         } else {
-            PriceDescreaseComparator priceDescreaseComparator = new PriceDescreaseComparator();
+            SortByPriceDESC priceDescreaseComparator = new SortByPriceDESC();
             Collections.sort(productList, priceDescreaseComparator);
             int i = 1; // số thứ tự
             for (Product product : productList) {
@@ -197,7 +197,7 @@ public class ProductManager {
         if (productList.isEmpty()) {
             System.out.println("There are no product in the list ");
         } else {
-            PriceAscendingComparator priceAscendingComparator = new PriceAscendingComparator();
+            SortByPriceASC priceAscendingComparator = new SortByPriceASC();
             Collections.sort(productList, priceAscendingComparator);
             int i = 1;
             for (Product product : productList) {

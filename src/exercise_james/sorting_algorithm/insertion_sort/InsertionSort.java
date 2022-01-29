@@ -21,16 +21,5 @@ public class InsertionSort {
             }
             list[pos] = x;
         }
-//        int pos, x;
-//        int leng = list.length;
-//        for (int i = 1; i < leng; i++) {
-//            x = list[i];
-//            pos = i;
-//            while (pos > 0 && x < list[pos - 1]) {
-//                list[pos] = list[pos - 1];
-//                pos--;
-//            }
-//            list[pos] = x;
-//        }
     }
 }
