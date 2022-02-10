@@ -19,7 +19,7 @@ public class ReadAndWriteFile<E> {
             Object line = "";
 
             while ((line = br.readLine()) != null) {
-                strings.add((E)line);
+                strings.add((E) line);
             }
             br.close();
         } catch (Exception ex) {
