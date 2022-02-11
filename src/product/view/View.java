@@ -1,6 +1,7 @@
 package product.view;
 
 import product.controller.Manager;
+import product.model.Product;
 
 import java.util.Scanner;
 

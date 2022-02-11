@@ -17,18 +17,18 @@ public class CrawlSongExample {
             scanner.useDelimiter("\\Z");
             String content = scanner.next();
             scanner.close();
-            content = content.replaceAll("\\n+" , "");
-            Pattern pattern = Pattern.compile("name_song\">(.*?)</a>");
-            Matcher matcher = pattern.matcher(content);
-            while (matcher.find()) {
-                System.out.println(matcher.group(1));
+            content = content.replaceAll("\\n+", "");
+            Pattern p = Pattern.compile("name_song\">(.*?)</a>");
+            Matcher m = p.matcher(content);
+            while (m.find()) {
+                System.out.println(m.group(1));
             }
-        } catch (MalformedURLException ex) {
-            ex.printStackTrace();
-        } catch (UnsupportedEncodingException ex) {
-            ex.printStackTrace();
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

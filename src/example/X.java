@@ -2,17 +2,16 @@ package example;
 
 public class X {
     public static void main(String [] args) {
-        try         {
-            badMethod();
-            System.out.print("A");
-        }  catch (Exception ex)  {
-            System.out.print("B");
-        } finally {
-            System.out.print("C");
+        String x = "1,2,3,4,5,6";
+        String[] y = x.split(",");
+        int tong = 0;
+        for (String z : y) {
+            int so = Integer.parseInt(z);
+            if (so % 2 == 0) {
+                tong += so;
+            }
         }
-        System.out.print("D");
-    }
-    public static void badMethod(){
-        throw new Error();
+
+        System.out.println(tong);
     }
 }

@@ -11,6 +11,7 @@ public class Main {
         Product product_3  = new Product(3,"Iphone", 400000);
 
         Manager manager = new Manager();
+        manager.add();
         new View();
     }
 }
